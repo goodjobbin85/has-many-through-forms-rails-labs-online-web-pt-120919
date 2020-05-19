@@ -1,1 +1,7 @@
+<h1>All Posts Ive Commented On</h1>
 
+<ul>
+  <% @user.comments.each do |comment| %>
+    <li><%= link_to comment.post.title, post_path(comment.post) %></li>
+  <% end %>
+</ul>
